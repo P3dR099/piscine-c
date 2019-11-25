@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/20 21:26:47 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/25 10:52:44 by pconde-c         ###   ########.fr       */
+/*   Created: 2019/11/25 08:00:57 by pconde-c          #+#    #+#             */
+/*   Updated: 2019/11/25 12:39:19 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	write(1, &c, 1);
+	int size_contador;
+	int i;
+	int str[size];
+	size_contador = size - 1;
+	i = 0;
+	while (size_contador >= 0)
+	{
+		str[i] = tab[size_contador];
+		size_contador--;
+		i++;
+		//printf("%d", tab[size]);
+	}
+		size = 0;
+		while (size > 0)
+		{
+			tab[i] = str[i];
+			i++;
+			size--;
+		}
 }
 
-void	ft_putnbr(int nb)
+int main()
 {
-	if (nb == -2147483648)
-	{
-		ft_putnbr(nb / 10);
-		ft_putchar('8');
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nb);
-	}
-	else
-	{
-		if (nb > 9)
-		{
-			ft_putnbr(nb / 10);
-		}
-		ft_putchar(48 + nb % 10);
-	}
+	int tab[] = {1,2,3,4};
+	int size = 3;
+	printf("i%", ft_rev_int_tab(tab, size));
+	//write(1, &i, 1);
 }

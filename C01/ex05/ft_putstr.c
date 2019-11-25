@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/21 11:52:34 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/25 10:39:51 by pconde-c         ###   ########.fr       */
+/*   Created: 2019/11/22 11:15:29 by pconde-c          #+#    #+#             */
+/*   Updated: 2019/11/25 02:35:15 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_ultimate_ft(int *********nbr)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	int c;
-	int c = 42;
-	*********nbr = c;
+	write(1, &c, 1);
+
+}
+void	ft_putstr(char *str)
+{
+	int i = 0;
+
+	while (str[i] !=  '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }

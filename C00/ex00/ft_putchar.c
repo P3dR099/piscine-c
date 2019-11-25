@@ -6,7 +6,7 @@
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:10:42 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/19 10:02:28 by pconde-c         ###   ########.fr       */
+/*   Updated: 2019/11/25 09:18:54 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,4 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-int		main(void)
-{
-	ft_putchar('c');
 }
