@@ -6,12 +6,11 @@
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 12:41:52 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/23 17:59:04 by pconde-c         ###   ########.fr       */
+/*   Updated: 2019/11/27 20:57:32 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = (a / b);
 	*mod = (a % b);

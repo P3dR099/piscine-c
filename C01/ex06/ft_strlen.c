@@ -6,19 +6,18 @@
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/25 01:20:31 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/25 09:04:23 by pconde-c         ###   ########.fr       */
+/*   Updated: 2019/11/27 19:28:38 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
-	char m;
-	m = 0;	 
+	int m;
+
+	m = 0;
 	while (str[m] != '\0')
 	{
 		m++;
 	}
-	return(m);
-
+	return (m);
 }

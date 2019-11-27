@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ejemplo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/25 07:41:42 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/25 07:46:08 by pconde-c         ###   ########.fr       */
+/*   Created: 2019/11/27 12:53:16 by pconde-c          #+#    #+#             */
+/*   Updated: 2019/11/27 19:23:40 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str);
+#include <unistd.h>
 
-int		main()
+void	ft_sort_int_tab(int *tab, int size)
 {
-        char str[] = "Hola";
-        int i = 48 + ft_strlen(str);
-        write(1, &i, 1);
+	int cont;
+	int swap;
+
+	cont = 0;
+	while (cont < (size - 1))
+	{
+		if (tab[cont] > tab[cont + 1])
+		{
+			swap = tab[cont];
+			tab[cont] = tab[cont + 1];
+			tab[cont + 1] = swap;
+			cont = 0;
+		}
+		else
+			cont++;
+	}
 }

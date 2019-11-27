@@ -6,7 +6,7 @@
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 11:15:29 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/25 02:35:15 by pconde-c         ###   ########.fr       */
+/*   Updated: 2019/11/27 19:06:58 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-
 }
+
 void	ft_putstr(char *str)
 {
-	int i = 0;
+	int i;
 
-	while (str[i] !=  '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
 		ft_putchar(str[i]);
 		i++;

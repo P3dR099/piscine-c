@@ -6,13 +6,13 @@
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 13:06:40 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/22 11:08:36 by pconde-c         ###   ########.fr       */
+/*   Updated: 2019/11/27 18:57:38 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
 	int c;
 
