@@ -47,8 +47,8 @@ int main()
 {
 	
 	char dest[4] = "hola";
-	char src[] = "adiosss";
+	char src[2] = "ad";
 	//int x = 6;
-	printf("%s", ft_strncpy(dest, src, 7));
+	printf("%s", ft_strncpy(dest, src, 5));
 	return (0);
 }
