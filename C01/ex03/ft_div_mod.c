@@ -14,4 +14,17 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = (a / b);
 	*mod = (a % b);
+
+	printf("Division:n %d\n", *div);
+	printf(" Resto: %d\n", *mod);
+		
+}
+
+int main()
+{
+	int a = 25;
+	int b = 5;
+	int *div = a / b;
+	int *mod = a % b;
+	ft_div_mod(a, b, &div, &mod);
 }

@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mzomeno- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/18 17:10:42 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/25 09:18:54 by pconde-c         ###   ########.fr       */
+/*   Created: 2019/10/16 12:06:12 by mzomeno-          #+#    #+#             */
+/*   Updated: 2019/10/21 19:30:44 by mzomeno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main()
+void	ft_putnbr(int nb)
 {
-	char tab[11] = "hola mundo";
-	int i = 0;
-	while( tab[i] != '\0')
-	{
-		//char x = tab[i];
-		//printf("%d", tab[i]); // tab[1], tab[2], tab[3]);
-		write(1, &tab[i], 1);
-		i++;
-	}
+	char			digit;
+	unsigned int	num;
 
+	num = nb;
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		num = -nb;
+	}
+	if (num < 10)
+	{
+		digit = num + '0';
+		write(1, &digit, 1);
+	}
+	else
+	{
+		ft_putnbr(num / 10);
+		digit = num % 10 + '0';
+		write(1, &digit, 1);
+	}
 }

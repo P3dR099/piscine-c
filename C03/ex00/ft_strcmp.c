@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mzomeno- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/25 01:20:31 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/27 19:28:38 by pconde-c         ###   ########.fr       */
+/*   Created: 2019/10/15 09:17:38 by mzomeno-          #+#    #+#             */
+/*   Updated: 2019/10/18 11:16:54 by mzomeno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int m;
+	int i;
 
-	m = 0;
-	while (str[m] != '\0')
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		m++;
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1[i] - s2[i]);
 	}
-	return (m);
-}
-
-int main()
-{
-	char str[] = {1,2,3,4};
-	int i = ft_strlen(str);
-	printf("%i", i);
+	return (s1[i] - s2[i]);
 }

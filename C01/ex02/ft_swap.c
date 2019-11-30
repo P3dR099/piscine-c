@@ -15,8 +15,19 @@
 void	ft_swap(int *a, int *b)
 {
 	int c;
+	//a = 10;
+	//b = 10;
 
 	c = *a;
 	*a = *b;
 	*b = c;
+	printf("%i %i", &a, &b );
 }
+
+int main()
+{
+	int *a = 10;
+	int *b = 20;
+	ft_swap(*a,*b);
+}
+

@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mzomeno- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/25 01:20:31 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/11/27 19:28:38 by pconde-c         ###   ########.fr       */
+/*   Created: 2019/10/15 09:50:43 by mzomeno-          #+#    #+#             */
+/*   Updated: 2019/10/17 10:03:32 by mzomeno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int m;
+	unsigned int pos;
 
-	m = 0;
-	while (str[m] != '\0')
+	pos = 0;
+	while ((s1[pos] != '\0' || s2[pos] != '\0') && pos < n)
 	{
-		m++;
+		if (s1[pos] > s2[pos])
+			return (1);
+		if (s1[pos] < s2[pos])
+			return (-1);
+		pos++;
 	}
-	return (m);
-}
-
-int main()
-{
-	char str[] = {1,2,3,4};
-	int i = ft_strlen(str);
-	printf("%i", i);
+	return (0);
 }
