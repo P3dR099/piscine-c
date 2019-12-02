@@ -32,3 +32,10 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
+
+/*int main()
+{
+	char *str = "hola como estas";
+	ft_strcapitalize(str);
+	printf("%c: ", ft_strcapitalize(str));
+}*/
