@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzomeno- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/16 11:57:37 by mzomeno-          #+#    #+#             */
-/*   Updated: 2019/10/21 18:38:10 by mzomeno-         ###   ########.fr       */
+/*   Created: 2019/12/04 04:27:31 by pconde-c          #+#    #+#             */
+/*   Updated: 2019/12/04 04:27:49 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
-	int	cont;
+	int m;
 
-	cont = 0;
-	while (str[cont] != '\0')
+	m = 0;
+	while (str[m] != '\0')
 	{
-		cont++;
+		m++;
 	}
-	return (cont);
+	return (m);
 }

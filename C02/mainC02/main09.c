@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/03 19:19:49 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/12/04 16:19:16 by pconde-c         ###   ########.fr       */
+/*   Created: 2019/12/01 18:59:44 by pconde-c          #+#    #+#             */
+/*   Updated: 2019/12/02 13:04:32 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 
-char	*ft_strcat(char *dest, char *src)
+int main()
 {
-	int		i;
-	int		b;
-
-	i = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	b = 0;
-	while (src[b] != '\0')
-	{
-		dest[i] = src[b];
-		i++;
-		b++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	char str[] = "salut, comment tu vas ? 42mots (q)uarante-deux; cinquante+et+un";
+	printf("%s\n", str);
+	ft_strcapitalize(str);
+	printf("%s\n", str);
+	return (0);
 }

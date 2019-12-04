@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   strncat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mzomeno- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 12:09:12 by mzomeno-          #+#    #+#             */
-/*   Updated: 2019/10/16 16:03:13 by mzomeno-         ###   ########.fr       */
+/*   Created: 2019/12/03 22:32:50 by pconde-c          #+#    #+#             */
+/*   Updated: 2019/12/04 16:08:51 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int	pos_dest;
+	int				pos_dest;
 	unsigned int	pos_src;
 
 	pos_dest = 0;

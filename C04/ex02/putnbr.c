@@ -1,34 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   putnbr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pconde-c <pconde-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/03 19:19:49 by pconde-c          #+#    #+#             */
-/*   Updated: 2019/12/04 16:19:16 by pconde-c         ###   ########.fr       */
+/*   Created: 2019/12/04 04:05:35 by pconde-c          #+#    #+#             */
+/*   Updated: 2019/12/04 04:21:45 by pconde-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <unistd.h>
 
-char	*ft_strcat(char *dest, char *src)
+void	ft_putchar(char c)
 {
-	int		i;
-	int		b;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	while (dest[i] != '\0')
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		i++;
+		ft_putnbr(nb / 10);
+		ft_putchar('8');
 	}
-	b = 0;
-	while (src[b] != '\0')
+	else if (nb < 0)
 	{
-		dest[i] = src[b];
-		i++;
-		b++;
+		ft_putchar('-');
+		ft_putnbr(-nb);
 	}
-	dest[i] = '\0';
-	return (dest);
+	else
+	{
+		if (nb > 9)
+		{
+			ft_putnbr(nb / 10);
+		}
+		ft_putchar(48 + nb % 10);
+	}
+//	printf("%i", nb);
+}
+
+int main()
+{
+	int	 a = 42;
+	ft_putnbr(-24125324);
+
 }
